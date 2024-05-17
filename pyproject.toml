@@ -1,0 +1,13 @@
+[build-system]
+requires = ["release-gitter[builder]"]
+build-backend = "pseudo_builder"
+
+[tool.release-gitter]
+git-url = "https://github.com/Kampfkarren/selene/"
+format = "selene-{version}-{system}.zip"
+exec = "chmod +x selene"
+
+[tool.release-gitter.map-system]
+Darwin = "macos"
+Windows = "windows"
+Linux = "linux"

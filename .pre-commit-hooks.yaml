@@ -1,0 +1,16 @@
+---
+- id: selene
+  name: Selene
+  description: A blazing-fast modern Lua linter written in Rust. Downloads Github release
+  entry: selene
+  language: python
+  types:
+    - lua
+
+- id: selene-system
+  name: Selene (system)
+  description: A blazing-fast modern Lua linter written in Rust
+  entry: selene
+  language: system
+  types:
+    - lua
