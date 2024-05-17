@@ -17,3 +17,20 @@ cargo install --branch main --git https://github.com/Kampfkarren/selene selene
 
 ### Disabling Roblox features
 selene is built with Roblox specific lints by default. If you don't want these, type `--no-default-features` after whichever command you choose.
+
+### pre-commit
+
+You can use Selene with [pre-commit](https://pre-commit.com/).
+There are 2 possible pre-commit hooks available:
+
+- `selene`: automatically installs the relevant prebuilt binary from GitHub releases.
+- `selene-system`: runs a `selene` binary available on the PATH. The binary must be pre-installed
+
+Add the following to your `.pre-commit-config.yaml` file:
+
+```yaml
+- repo: https://github.com/Kampfkarren/selene
+  rev: v0.27.1
+  hooks:
+    - id: selene # or selene-system
+```
